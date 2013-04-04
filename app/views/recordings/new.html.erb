@@ -1,0 +1,16 @@
+<h1>Create a New Recording/Album</h1>
+
+<%= form_for(@recording) do |f| %>
+
+  <p>
+    <%= f.label :name, "Album name:" %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :band_name, "Band name:" %><br />
+    <%= f.text_field :band_name %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

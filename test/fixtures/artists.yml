@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fname: MyString
+  lname: MyString
+  age: 1
+  gender: MyString
+  instrument: MyString
+
+two:
+  fname: MyString
+  lname: MyString
+  age: 1
+  gender: MyString
+  instrument: MyString

@@ -1,0 +1,6 @@
+<% @bands.each do |band| %>
+<ul>
+  <p><%= link_to "#{band.name}", band_path(band) %></p>
+</ul>
+
+<% end %>
