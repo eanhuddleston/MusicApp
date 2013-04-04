@@ -1,14 +1,10 @@
-<h1>Create a New Band</h1>
+<h1>Create a New Single</h1>
 
-<%= form_for(@band) do |f| %>
+<%= form_for(@single) do |f| %>
 
   <p>
-    <%= f.label :name, "Band name:" %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :date_formed, "Date formed:" %><br />
-    <%= f.text_field :date_formed %>
+    <%= f.label :title, "Title:" %><br />
+    <%= f.text_field :title %>
   </p>
   <p>
     <%= f.submit %>

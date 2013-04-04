@@ -1,6 +1,6 @@
-<% @bands.each do |band| %>
+<% @singles.each do |single| %>
 <ul>
-  <p><%= link_to "#{band.name}", band_path(band) %></p>
+  <p><%= link_to "#{single.title}", single_path(single) %></p>
 </ul>
 
 <% end %>

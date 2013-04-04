@@ -1,6 +1,6 @@
-<% @bands.each do |band| %>
+<% @recordings.each do |recording| %>
 <ul>
-  <p><%= link_to "#{band.name}", band_path(band) %></p>
+  <p><%= link_to "#{recording.album_name}", recording_path(recording) %></p>
 </ul>
 
 <% end %>

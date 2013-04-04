@@ -1,6 +1,6 @@
-<h1><%= "#{@band.name}" %></h1>
+<h1><%= "#{@single.title}" %></h1>
 
 <ul>
-  <p><%= "Date formed: #{@band.date_formed}" %></p>
-  <p><%= "Genre: #{@band.genre}" %></p>
+  <p><%= "Album name: #{@single.recording.album_name}" %></p>
+  <p><%= "Band: #{@single.recording.band.name}" %></p>
 </ul>
