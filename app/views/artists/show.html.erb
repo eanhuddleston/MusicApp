@@ -1,4 +1,5 @@
-<h1><%= "#{@artist.fname} #{@artist.lname}" %></h1>
+<h1><%= "#{@artist.fname} #{@artist.lname}" %></h1> 
+ <!-- REV consider a helper method that combines the name -->
 
 <ul>
   <p><%= "Age: #{@artist.age}" %></p>
@@ -8,9 +9,11 @@
   <p><%= "Instrument: #{@artist.instrument}" %></p>
   <br>
   <p>Band:</p>
-  <p><% @artist.bands.each do |band| %>
+  <p><% @artist.bands.each do |band| %> 
+    <!-- REV you forgot to close the p tag -->
     <p><%= link_to "#{band.name}", band_url(band) %></p>
   <p><% end %>
   <br>
+  <!-- REV should be <br /> -->
   <p><%= link_to "<< Artists", artists_url %></p>
 </ul>

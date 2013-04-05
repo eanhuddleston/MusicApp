@@ -13,7 +13,7 @@
 #
 
 class Artist < ActiveRecord::Base
-  attr_accessible :age, :fname, :gender, :instrument, :lname
+  attr_accessible :age, :fname, :gender, :instrument, :lname # REV Only one instrument?
   attr_accessible :bands_attributes
 
   has_many :band_artists

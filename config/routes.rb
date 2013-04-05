@@ -3,7 +3,7 @@ MusicApp::Application.routes.draw do
   resources :bands
   resources :singles
   resources :recordings
-  root :to => 'bands#index'
+  root :to => 'bands#index' # REV put root above resources
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

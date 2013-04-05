@@ -15,4 +15,6 @@ class BandsController < ApplicationController
   def index
     @bands = Band.all
   end
+
+  # REV I want to destroy a band! (Nickelback)
 end
