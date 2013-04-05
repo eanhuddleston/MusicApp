@@ -2,6 +2,15 @@
 
 <ul>
   <p><%= "Age: #{@artist.age}" %></p>
+  <br>
   <p><%= "Gender: #{@artist.gender}" %></p>
+  <br>
   <p><%= "Instrument: #{@artist.instrument}" %></p>
+  <br>
+  <p>Band:</p>
+  <p><% @artist.bands.each do |band| %>
+    <p><%= link_to "#{band.name}", band_url(band) %></p>
+  <p><% end %>
+  <br>
+  <p><%= link_to "<< Artists", artists_url %></p>
 </ul>

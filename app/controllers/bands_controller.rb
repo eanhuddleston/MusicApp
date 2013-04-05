@@ -5,6 +5,7 @@ class BandsController < ApplicationController
 
   def create
     @band = Band.create(params[:band])
+    redirect_to band_url(@band)
   end
 
   def show

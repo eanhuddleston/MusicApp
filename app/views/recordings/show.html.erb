@@ -2,5 +2,11 @@
 
 <ul>
   <p><%= "Album name: #{@recording.album_name}" %></p>
-  <p><%= "Band name: #{@recording.band}" %></p>
+  <p><%= "Band: #{@recording.band}" %></p>
 </ul>
+
+<%= link_to "<< Back to #{recording.band}", bands_path %>
+
+<p>Band:</p>
+<p><%= link_to "#{recording.band.name}", band_url(band) %></p>
+<br>

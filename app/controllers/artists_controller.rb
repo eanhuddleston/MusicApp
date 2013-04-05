@@ -1,17 +1,15 @@
 class ArtistsController < ApplicationController
   def new
     @artist = Artist.new
-    @band = Band.new
+    @artist.bands.new
   end
 
   def create
-    @artist = Artist.create(params[:artist])
-    @band = Band.where(:name => params[:band_name])
-    if @band
-      @artist.bands << @band
+    @artist = Artist.new(params[:artist])
+    if @artist.save
+      redirect_to artist_url(@artist)
     else
-      @artist.bands.build(params[:band_name])
-      #redirect to update page
+      render :new
     end
   end
 

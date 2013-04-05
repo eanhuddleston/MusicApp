@@ -1,20 +1,17 @@
 class RecordingsController < ApplicationController
   def new
     @recording = Recording.new
-    @band = Band.new
+    @recording.band.new
   end
 
   def create
-    @recording = Recording.create(params[:artist])
-    @band = Band.where(:name => params[:band_name])
-    if @band
-      @recording.band = @band
+    @recording = Recording.new(params[:recording])
+    if @recording.save
+      redirect_to recording_url(@recording)
     else
-      @recording.bands.build(params[:band_name])
-      #redirect to update page
+      render :new
     end
   end
-
 
   def show
     @recording = Recording.find(params[:id])

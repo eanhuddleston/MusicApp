@@ -6,13 +6,13 @@
     <%= f.label :album_name, "Album name:" %><br />
     <%= f.text_field :album_name %>
   </p>
-    <% fields_for @band do |b| %>
+  <p>
+    <%= f.fields_for :band do |b| %>
     <p>
-      <%= b.label :name, "Name" %>
+      <%= b.label :name, "Band name" %>
       <%= b.text_field :name %>
     </p>
     <% end %>
-  <p>
   <p>
     <%= f.submit %>
   </p>

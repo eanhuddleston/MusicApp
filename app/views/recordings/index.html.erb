@@ -1,3 +1,5 @@
+<h1>Albums</h1>
+
 <% @recordings.each do |recording| %>
 <ul>
   <p><%= link_to "#{recording.album_name}", recording_path(recording) %></p>

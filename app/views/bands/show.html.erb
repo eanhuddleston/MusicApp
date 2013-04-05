@@ -2,5 +2,18 @@
 
 <ul>
   <p><%= "Date formed: #{@band.date_formed}" %></p>
+  <br>
   <p><%= "Genre: #{@band.genre}" %></p>
+  <br>
+  <p>Band members:</p>
+  <p><% @band.artists.each do |artist| %>
+    <p><%= link_to "#{artist.fname} #{artist.lname}", artist_url(artist) %></p>
+  <p><% end %>
+  <br>
+  <p>Albums:</p>
+  <p><% @band.recordings.each do |recording| %>
+    <p><%= link_to "#{recording.title}", recording_url(recording) %></p>
+  <p><% end %>
+  <br>
+  <p><%= link_to "<< Bands", bands_url %></p>
 </ul>

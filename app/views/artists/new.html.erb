@@ -25,9 +25,9 @@
     <%= f.label :instrument, "Instrument" %><br>
     <%= f.text_field :instrument %>
   </p>
-    <% fields_for @band do |b| %>
+    <%= f.fields_for :bands do |b| %>
     <p>
-      <%= b.label :name, "Name" %>
+      <%= b.label :name, "Band name" %>
       <%= b.text_field :name %>
     </p>
     <% end %>

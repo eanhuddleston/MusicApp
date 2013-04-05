@@ -14,6 +14,9 @@
 
 class Artist < ActiveRecord::Base
   attr_accessible :age, :fname, :gender, :instrument, :lname
+  attr_accessible :bands_attributes
+
   has_many :band_artists
   has_many :bands, :through => :band_artists
+  accepts_nested_attributes_for :bands
 end
