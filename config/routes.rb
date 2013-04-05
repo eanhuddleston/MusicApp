@@ -1,4 +1,6 @@
 MusicApp::Application.routes.draw do
+  # REV: put root route at the top.  it's the most used route and should
+  # be found first (least processing by router)
   resources :artists
   resources :bands
   resources :singles
